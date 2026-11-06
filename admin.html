@@ -16,7 +16,7 @@
   - 数据结构 state（home / games / zones / tagPool / coupons / products / nextProductId / popups）完全不变
   - localStorage 键 xy_admin_state_v1、gh_token_xy 不变
   - 导出 JSON、「对接代码」(GAMES / ZONES / PRODUCTS / HOME_CONFIG) 的格式不变
-  - GitHub 同步（lhc8055/lv 仓库 data.json）、Supabase 表（user_data / config / posts）读写逻辑不变
+  - GitHub 同步（lhc8055/dl 仓库 data.json）、Supabase 表（user_data / config / posts）读写逻辑不变
   - 管理员密码哈希 ADMIN_HASH 不变
 
  【功能位置调整 / 合并（导航由原来 12 个 Tab 精简为 5 组 9 页）】
@@ -746,7 +746,7 @@ body[data-page=chat] .page-wrap{max-width:1180px}
 /* ================================================================
    星柚电竞 · 后台管理系统（iOS 风格版）
    所有数据保存在浏览器 localStorage，可通过「数据与同步」导出 JSON / 对接代码，
-   或用 GitHub Token 推送到 88sss.top（仓库 lhc8055/lv 的 data.json）。
+   或用 GitHub Token 推送到 88sss.top（仓库 lhc8055/dl 的 data.json）。
    ================================================================ */
 
 /* ---------- 0. 工具函数 ---------- */
@@ -2127,7 +2127,7 @@ $("#copyCodeBtn").addEventListener("click", () => {
 });
 
 /* ---------- GitHub 同步（88sss.top） ---------- */
-const GH_REPO = "lhc8055/lv", GH_FILE = "data.json", GH_BRANCH = "main";
+const GH_REPO = "lhc8055/dl", GH_FILE = "data.json", GH_BRANCH = "main";
 function getGhToken(){ return $("#ghToken").value.trim(); }
 function setSyncStatus(msg, ok){
   const el = $("#syncStatus");
